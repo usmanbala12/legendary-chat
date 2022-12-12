@@ -1,0 +1,600 @@
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.chat-screen {
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+}
+
+.display-pic {
+  border-radius: 50%;
+  height: 4em;
+  width: 4em;
+  background-color: white;
+}
+
+.room-header {
+  display: flex;
+  align-items: center;
+  height: 10vh;
+  outline: 1px solid black;
+  background-color: var(--clr-primary);
+  color: var(--clr-secondary);
+}
+
+.room-header img {
+  margin-left: 0.5em;
+}
+
+.gobackroom {
+  margin-left: 0.3em;
+  font-size: 1.5em;
+  background: transparent;
+  border: none;
+  color: white;
+}
+
+.room-title {
+  margin-left: 10vw;
+  font-weight: 700;
+}
+
+
+.messages {
+  height: 80vh;
+  overflow: scroll;
+  background-color: var(--clr-secondary);
+}
+
+.input-group {
+  height: 10vh;
+  margin: auto;
+  background-color: var(--clr-secondary);
+}
+
+.input-group form {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.message-card {
+  position: relative;
+  width: 70%;
+  min-height: 3em;
+  padding-block: 0.5em;
+  padding-inline: 0.5em;
+  background-color: var(--clr-primary);
+  color: var(--clr-secondary);
+  margin-inline: 1em;
+  margin-block: 2em;
+  border-top-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.message-time {
+  position: absolute;
+  font-weight: 700;
+  top: 0;
+  right: 0;
+  margin-right: 0.5em;
+}
+
+.message-sender {
+  position: absolute;
+  height: fit-content;
+  top: 0;
+  left: 0;
+  margin-left: 0.5em;
+  font-weight: 700;
+}
+
+.message-text {
+  height: 100%;
+  margin-top: 1em;
+}
+
+.message-input {
+  margin-left: 1em;
+  width: 80%;
+  min-height: 3em;
+  max-height: 5em;
+  overflow-x: scroll;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  overflow: scroll;
+  background-color: var(--clr-secondary);
+}
+
+.input-group button {
+  height: auto;
+  background-color: var(--clr-primary);
+  color: var(--clr-secondary);
+  width: 2em;
+  height: 2em;
+  font-size: 1.5em;
+  border-radius: 50%;
+  padding: 0.3em;
+  border: none;
+  margin-left: 0.3em;
+  box-shadow: none;
+  margin-right: 0.5em;
+}
+
+
+.mine {
+  margin-left: 25vw;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 10px;
+}
+
+.autosize {
+  min-height: 3em;
+  max-height: 6em;
+  overflow: scroll;
+  resize: none;
+  overflow: hidden;
+  z-index: 3;
+  margin-left: auto;
+  width: 80%;
+  border-top-left-radius: 23px;
+  border-bottom-left-radius: 23px;
+  border-top-right-radius: 23px;
+  border-bottom-right-radius: 23px;
+  background-color: white;
+}
+
+.room-list {
+  height: 100vh;
+  outline: 3px solid black;
+}
+
+.top-bar {
+  height: 15vh;
+  background-color: var(--clr-primary);
+  color: var(--clr-secondary);
+  position: relative;
+  padding: 1em;
+}
+
+.name-icon {
+  display: flex;
+  justify-content: space-between;
+}
+
+.name-icon svg {
+  width: 1.5em;
+  height: 1.5em;
+}
+
+.rooms {
+  height: 85vh;
+  overflow: scroll;
+  background-color: var(--clr-secondary);
+}
+
+.room-card {
+  background-color: var(--clr-secondary);
+  display: flex;
+  justify-content: space-between;
+  padding: 1em;
+}
+
+.d-name {
+  font-weight: 700;
+  margin-bottom: 0.4em;
+  font-size: 1.2em;
+}
+
+.unread-message-count {
+  border-radius: 50%;
+  background-color: var(--clr-primary);
+  margin-top: 0.2em;
+  padding: 0.3em;
+  color: white;
+}
+
+
+.search-profile {
+  padding: 0.3em;
+  display: flex;
+  gap: 1em;
+}
+
+.app-name {
+  font-size: 2em;
+  font-weight: 700;
+  letter-spacing: 5px;
+}
+
+.section-title {
+  position: absolute;
+  bottom: 0;
+  font-size: 0.8em;
+  text-align: center;
+  left: 0; 
+  right: 0; 
+  margin-left: auto; 
+  margin-right: auto;
+  margin-bottom: 0.5em;
+}
+
+.just-flex, .time-count {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0.5em;
+}
+
+.time-count {
+  align-items: center;
+}
+
+.name-message {
+  display: flex;
+}
+
+.name-message img {
+  width: 4em;
+  height: 4em;
+}
+
+.profile {
+  position: relative;
+  height: 100vh;
+  background-color: var(--clr-secondary);
+  display: grid;
+  place-items: center;
+  padding-inline: 1em;
+}
+
+.profile-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 10px;
+  width: 90%;
+  background-color: var(--clr-primary);
+  color: var(--clr-secondary);
+  padding-top: 2em;
+  padding-bottom: 1em;
+  padding-inline: 1em;
+}
+
+.goback {
+  position: absolute;
+  font-size: 2em;
+  border: none;
+  background-color: transparent;
+  color: var(--clr-primary);
+  top: 30px;
+  left: 30px;
+}
+
+
+.profile-picture {
+  position: relative;
+  width: 10em;
+  height: 10em;
+  margin: 0 auto;
+  border-radius: 50%;
+  background-color: white;
+  margin-bottom: 2em;
+}
+
+.profile-picture img {
+  width: inherit;
+  height: inherit;
+  border-radius: inherit;
+}
+
+.profile-picture button {
+  position: absolute;
+  height: 2em;
+  width: 2em;
+  bottom: 0px;
+  right: -10px;
+  background-color: gray;
+  border-radius: 50%;
+  border-color: transparent;
+  font-size: 2em;
+  color: white;
+}
+
+.profile-card span {
+  display: block;
+}
+
+.profile-name {
+  margin-bottom: 0.5em;
+  background-color: var(--clr-primary);
+  padding: 1em;
+  border-radius: 5px;
+}
+
+.profile-about {
+  background-color: var(--clr-primary);
+  padding: 1em;
+  border-radius: 5px;
+}
+
+.profile-about span, .profile-name span {
+  margin-bottom: 0.5em;
+}
+
+.title {
+  font-weight: 700;
+}
+
+.loading {
+  color: black !important;
+}
+
+.profile-modal {
+  display: block; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  bottom: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  color: black;
+}
+
+.modal-content {
+  position: fixed;
+  bottom: 0;
+  background-color: var(--clr-secondary);
+  color: black;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 100%;
+  height: 20vh;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-content button {
+  width: 90%;
+  background-color: var(--clr-primary);
+  color: var(--clr-secondary);
+  font-weight: 500;
+  border-radius: 10px;
+  font-size: 2em;
+  margin-bottom: 0.3em;
+  padding: 0.2em;
+}
+
+.modal-content * {
+  color: black;
+}
+
+#profilePic {
+  display: none;
+}
+
+.register form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  justify-content: center;
+  align-items: center;
+}
+
+.register input {
+  width: 80%;
+  border: none;
+  border-bottom: 3px solid black;
+  margin-bottom: 1.5em;
+  background: url('assets/user.svg') no-repeat left;
+  min-height: 2.5em;
+  padding-left: 13%;
+  font-size: 1.2em;
+  padding-block: 0.7em;
+}
+
+.register button {
+  width: 35%;
+  min-height: 2.5em;
+  font-size: 1.4em;
+  background-color: var(--clr-primary);
+  color: white;
+  border-radius: 10px;
+}
+
+.register p {
+  font-size: 1.3em;
+  margin-top: 1em;
+}
+.add-chat {
+  position: absolute;
+  background-color: var(--clr-primary);
+  color: var(--clr-secondary);
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  height: 3em;
+  width: 3em;
+  right: 50px;
+  bottom: 50px;
+}
+
+.add-chat svg {
+  width: 1em;
+  height: 1em;
+}
+
+.display-none {
+  display: none;
+}
+
+.addchat-modal p {
+  position: absolute;
+  bottom: 120px;
+  right: 50px;
+  color: var(--clr-secondary);
+  padding: 0.5em;
+  font-size: 1.2em;
+  border-radius: 7px;
+}
+
+.addchat-modal button {
+  position: absolute;
+  height: 3em;
+  width: 3em;
+  right: 50px;
+  bottom: 50px;
+  border: none;
+  border-radius: 50%;
+  color: var(--clr-secondary);
+}
+
+
+.addchat-modal > button svg {
+  width: 1em;
+  height: 1em;
+}
+
+
+
+.addchat-modal * {
+  background-color: var(--clr-primary);
+}
+
+.friend-card {
+  position: relative;
+  display: flex;
+  align-items: center;
+  background-color: var(--clr-secondary);
+}
+
+.friend-card button {
+  position: absolute;
+  right: 20px;
+  background-color: var(--clr-primary);
+  color: var(--clr-secondary);
+  border: none;
+  border-radius: 5px;
+  padding: 0.3em;
+}
+
+.friend-name {
+  color: #888;
+}
+
+.friend-username {
+  font-weight: 500;
+}
+
+.friends-top-bar {
+  height: 15vh;
+  background-color: var(--clr-primary);
+  position: relative;
+}
+
+.friends-top-bar .goback {
+  color: white;
+  top: 10%;
+  left: 5%;
+}
+
+.friends-top-bar .search-friends {
+  position: absolute;
+  background-color: var(--clr-secondary);
+  width: 95%;
+  bottom: 15%;
+  left: 2%;
+  padding: 0.3em;
+  font-size: 1.3em;
+}
+
+.profile-menu {
+  position: absolute;
+  top: 25px;
+  right: 20px;
+  font-size: 1.5em;
+  background-color: transparent;
+  border: none;
+}
+
+.profile-menu-modal {
+  position: absolute;
+  width: 30%;
+  min-height: 3em;
+  right: 10px;
+  top: 20px;
+  background-color: var(--clr-primary);
+  padding: 1em;
+}
+
+
+.profile-menu-modal .items {
+  color: var(--clr-secondary);
+  font-size: 1.2em;
+  text-align: center;
+}
+
+.login, .register {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  background-color: var(--clr-secondary);
+}
+
+.login form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+}
+
+.login input {
+  width: 80%;
+  border: none;
+  border-bottom: 3px solid black;
+  margin-bottom: 1.5em;
+  background: url('assets/user.svg') no-repeat left;
+  min-height: 2.5em;
+  padding-left: 13%;
+  font-size: 1.2em;
+  padding-block: 0.7em;
+}
+
+.login input::placeholder {
+  color: rgb(82, 82, 82);
+  left: 20px;
+}
+
+.login button {
+  width: 35%;
+  min-height: 2.5em;
+  font-size: 1.4em;
+  background-color: var(--clr-primary);
+  color: white;
+  border-radius: 10px;
+}
+
+.login p {
+  margin-top: 1.5em;
+  font-size: 1.3em;
+}
+
+.login p:hover {
+  cursor: pointer;
+}
+
